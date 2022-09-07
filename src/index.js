@@ -4,8 +4,10 @@ const $name = document.querySelector("h1");
 const data = {
   name: "Enrique Palomino Castello",
   nickname: "devpcastello",
-  description: "...",
-  avatar: "...",
+  description:
+    "FullStack Web Developer - Civil Engineer, #JavaScript #Node #React",
+  avatar:
+    "https://pbs.twimg.com/profile_images/1155706429967339523/YD4duJTw_400x400.jpg",
   social: [
     {
       name: "github",
@@ -41,12 +43,12 @@ const data = {
       color: "red",
       emoji: "📖",
     },
-    {
-      name: "podcast",
-      url: "https://example.com/",
-      color: "yellow",
-      emoji: "💬",
-    },
+    // {
+    //   name: "podcast",
+    //   url: "https://example.com/",
+    //   color: "yellow",
+    //   emoji: "💬",
+    // },
   ],
   footer: "Per aspera ad astra",
 };
