@@ -2,23 +2,39 @@ const $links = document.querySelector("#links");
 const $name = document.querySelector("h1");
 
 const data = {
-  name: "Oscar Barajas",
-  nickname: "gndx",
+  name: "Enrique Palomino Castello",
+  nickname: "devpcastello",
   description: "...",
   avatar: "...",
   social: [
     {
-      name: "twitter",
-      url: "https://twitter.com/",
-      username: "",
+      name: "github",
+      url: "https://github.com/devpcastello",
+      username: "devpcastello",
+    },
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/devpcastello/",
+      username: "devpcastello",
     },
     {
       name: "instagram",
       url: "https://instagram.com/",
       username: "",
     },
+    {
+      name: "twitter",
+      url: "https://twitter.com/enri4gios",
+      username: "enrigios",
+    },
   ],
   links: [
+    {
+      name: "Portfolio",
+      url: "#",
+      color: "green",
+      emoji: "💼",
+    },
     {
       name: "blog",
       url: "https://example.com/",
@@ -32,7 +48,7 @@ const data = {
       emoji: "💬",
     },
   ],
-  footer: "Made with Love on Colombia",
+  footer: "Per aspera ad astra",
 };
 
 const main = () => {
