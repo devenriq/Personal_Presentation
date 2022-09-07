@@ -1,6 +1,8 @@
 import data from "./data.js";
 
 const $name = document.querySelector("h1");
+const $nickname = document.querySelector("h2");
+const $description = document.querySelector("#description");
 const $social = document.querySelector("#social");
 const $links = document.querySelector("#links");
 
@@ -18,10 +20,6 @@ const main = () => {
     `;
     })
     .join("");
-
-  // let newSocial = document.createElement("section");
-
-  // $social.append(newSocial);
 
   let links = data?.links
     ?.map((link) => {
@@ -41,9 +39,11 @@ const main = () => {
   let newItem = document.createElement("section");
   newItem.innerHTML = links;
 
+  $name.append(name);
+  $nickname.append(nickname);
+  $description.append(description);
   $social.innerHTML = social;
   $links.append(newItem);
-  $name.append(name);
 };
 
 main();
