@@ -1,60 +1,28 @@
-const $links = document.querySelector("#links");
-const $name = document.querySelector("h1");
+import data from "./data.js";
 
-const data = {
-  name: "Enrique Palomino Castello",
-  nickname: "devpcastello",
-  description:
-    "FullStack Web Developer - Civil Engineer, #JavaScript #Node #React",
-  avatar:
-    "https://pbs.twimg.com/profile_images/1155706429967339523/YD4duJTw_400x400.jpg",
-  social: [
-    {
-      name: "github",
-      url: "https://github.com/devpcastello",
-      username: "devpcastello",
-    },
-    {
-      name: "linkedin",
-      url: "https://www.linkedin.com/in/devpcastello/",
-      username: "devpcastello",
-    },
-    {
-      name: "instagram",
-      url: "https://instagram.com/",
-      username: "",
-    },
-    {
-      name: "twitter",
-      url: "https://twitter.com/enri4gios",
-      username: "enrigios",
-    },
-  ],
-  links: [
-    {
-      name: "Portfolio",
-      url: "#",
-      color: "green",
-      emoji: "💼",
-    },
-    {
-      name: "blog",
-      url: "https://example.com/",
-      color: "red",
-      emoji: "📖",
-    },
-    // {
-    //   name: "podcast",
-    //   url: "https://example.com/",
-    //   color: "yellow",
-    //   emoji: "💬",
-    // },
-  ],
-  footer: "Per aspera ad astra",
-};
+const $name = document.querySelector("h1");
+const $social = document.querySelector("#social");
+const $links = document.querySelector("#links");
 
 const main = () => {
   let name = document.createTextNode(data?.name);
+  let nickname = document.createTextNode(data?.nickname);
+  let description = document.createTextNode(data?.description);
+
+  let social = data?.social
+    ?.map((link) => {
+      return `
+    <a href="${link.url}" target="_blank">
+      ${link.svg}
+    </a>
+    `;
+    })
+    .join("");
+
+  // let newSocial = document.createElement("section");
+
+  // $social.append(newSocial);
+
   let links = data?.links
     ?.map((link) => {
       return `
@@ -73,6 +41,7 @@ const main = () => {
   let newItem = document.createElement("section");
   newItem.innerHTML = links;
 
+  $social.innerHTML = social;
   $links.append(newItem);
   $name.append(name);
 };
